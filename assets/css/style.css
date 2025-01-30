@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Noto+Sans+JP:wght@100..900&family=Shippori+Mincho&display=swap");
+
+/* 全体にフォント（Shippori Mincho）を適用 */
+/* google fontsから取得 */
+* {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,0 +1,180 @@
+.header {
+  /* (top,right,bottom,left)はpositionとともに使う */
+  /* fixedは画面に対して作用する */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  /* rgbaのaは透明度を指定する*/
+  background-color: rgba(255, 255, 255, 0.5);
+  /* display: flex;は要素を並べるプロパティ */
+  display: flex;
+  /* rowは横並び、columnは縦並び、デフォルトはrow */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  /* 要素の最前面に出す値（大きい数の方がより前にくる） */
+  /* 例えば他の要素がz-index: 11;の場合重なった時に11を指定されている要素が優先される */
+  z-index: 10;
+}
+
+.header-title {
+  margin: 0;
+  text-align: center;
+  line-height: 115%;
+  color: #494640;
+  text-decoration: none;
+  font-size: 30px;
+
+  span {
+    /* 文字が持ってる高さのプロバティ、使う理由はデザインの問題で行間を開けるために使う */
+    line-height: 100%;
+    font-size: 16px;
+  }
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header-nav-above {
+  display: flex;
+
+  a {
+    text-decoration: none;
+
+    padding: 4px 12px;
+  }
+}
+
+.header-nav-above-info,
+.header-nav-above-contact {
+  background-color: #8dba31;
+  border: 1px solid #8dba31;
+  color: #fff;
+  /* transition-duration: 0.1s;はアニメーションの秒数 */
+  /* transition-delay: 500ms;はアニメーション発火を遅らせる */
+  transition: 0.5s;
+
+  /* ホバー時に動きをつける */
+  /* &はそれを囲んでいる要素をさす今回であれば以下である
+.header-nav-above-info,
+.header-nav-above-contact */
+  &:hover {
+    /* transparentは透明 */
+    background-color: transparent;
+    color: #8dba31;
+  }
+}
+
+.header-nav-above-tel {
+  color: #8dba31;
+  font-weight: bold;
+
+  /* ホバー時に動きをつける */
+  &:hover {
+    text-decoration: underline;
+    /* 文字と下線の距離を開ける */
+    text-underline-offset: 5px;
+  }
+}
+
+.header-nav-below {
+  display: flex;
+  /* gapは要素間の間隔、gapはflexと一緒に使う、marginを全てにつけるんはだるいからgapで一括でやれる */
+  gap: 20px;
+
+  a {
+    text-decoration: none;
+    color: #494640;
+    border: 1px solid transparent;
+    padding: 3px 15px;
+    transition: 0.5s;
+
+    /* ホバー時に動きをつける */
+    &:hover {
+      border-bottom: 1px solid #494640;
+    }
+  }
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+.number-of-floors {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  margin-top: 60px;
+}
+
+.section1 {
+  display: flex;
+  justify-content: center;
+  gap: 400px 100px;
+
+  span {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+main {
+  margin-top: 150px;
+}
+
+.footer {
+  margin-top: 30px;
+  width: 100%;
+  padding: 60px 0;
+  background: #fafafa;
+  /* relativeはabsoluteとセットで使うことが多い */
+  position: relative;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-info-title {
+  font-size: 30px;
+}
+
+.footer-info-text {
+  font-size: 18px;
+}
+
+.footer-arrow {
+  /* relativeが記載してある親要素の位置を固定する
+  今回であればbottom、rightを指定した
+  要素を重ねるときも使う*/
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  /* 本来ポインターにならない要素をポインターにする
+  リンクと同じような挙動になる */
+  cursor: pointer;
+}
+
+.copyright {
+  width: 100%;
+  height: 50px;
+  background: #aaa;
+
+  p {
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+  }
+}

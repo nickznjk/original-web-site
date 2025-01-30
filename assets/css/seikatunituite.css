@@ -1,0 +1,149 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+.header-title {
+  margin: 0;
+  text-align: center;
+  line-height: 115%;
+  color: #494640;
+  text-decoration: none;
+  font-size: 30px;
+
+  span {
+    line-height: 100%;
+    font-size: 16px;
+  }
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header-nav-above {
+  display: flex;
+
+  a {
+    text-decoration: none;
+
+    padding: 4px 12px;
+  }
+}
+
+.header-nav-above-info,
+.header-nav-above-contact {
+  background-color: #8dba31;
+  border: 1px solid #8dba31;
+  color: #fff;
+  transition: 0.5s;
+
+  /* ホバー時に動きをつける */
+  &:hover {
+    background-color: transparent;
+    color: #8dba31;
+  }
+}
+
+.header-nav-above-tel {
+  color: #8dba31;
+  font-weight: bold;
+
+  /* ホバー時に動きをつける */
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+}
+
+.header-nav-below {
+  display: flex;
+  gap: 20px;
+
+  a {
+    text-decoration: none;
+    color: #494640;
+    border: 1px solid transparent;
+    padding: 3px 15px;
+    transition: 0.5s;
+
+    /* ホバー時に動きをつける */
+    &:hover {
+      border-bottom: 1px solid #494640;
+    }
+  }
+}
+
+main {
+  margin-top: 150px;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+.section1 {
+  display: flex;
+  justify-content: center;
+  gap: 400px 100px;
+  margin-top: 100px;
+
+  span {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.footer {
+  margin-top: 30px;
+  width: 100%;
+  padding: 60px 0;
+  background: #fafafa;
+  position: relative;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-info-title {
+  font-size: 30px;
+}
+
+.footer-info-text {
+  font-size: 18px;
+}
+
+.footer-arrow {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.copyright {
+  width: 100%;
+  height: 50px;
+  background: #aaa;
+
+  p {
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+  }
+}
